@@ -9,15 +9,14 @@
 	<script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.6/aframe/build/aframe-ar.js"></script>
 </head>
 <body style="margin: 0px; overflow: hidden;">
-	<a-scene id="rainbowScene" background="color: #FAFAFA"></a-scene>
-	
-	
 	<a-scene embedded arjs>
 		<a-marker preset ="hiro">
-			<a-entity scale="0.2 0.2 0.2"></a-entity>
+			<a-entity scale="0.02 0.02 0.02"></a-entity>
 		</a-marker>
 		<a-entity camera></a-entity>
 	</a-scene>
+	<a-scene id="rainbowScene" background="color: #FAFAFA"></a-scene>
 	<script src="rainbow.js"></script>
+	
 </body>
 </html>
