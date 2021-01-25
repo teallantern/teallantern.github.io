@@ -17,7 +17,7 @@
 	        	zStartPosition += zIncrement;
 
         	// Place newly created torus in scene
-        	document.getElementsByTagName("a-scene")[0].appendChild(torus);
+        	document.getElementsByTagName("a-entity")[0].appendChild(torus);
 		}
 		var ground = document.createElement("a-plane");
 		ground.setAttribute("id", "ground");
@@ -31,4 +31,4 @@
 		ground.object3D.position.set(0,0,-zStartPosition +1.5);
 		ground.object3D.rotation.set.x = -90;
 
-		document.getElementsByTagName("a-scene")[0].appendChild(ground);
+		document.getElementsByTagName("a-entity")[0].appendChild(ground);
