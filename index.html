@@ -12,7 +12,9 @@
 
 	<a-scene embedded arjs>
 		<a-marker preset ="hiro">
-			<a-entity scale="0.2 0.2 0.2"></a-entity>
+			<a-entity scale="0.2 0.2 0.2" >
+				<a-scene id="rainbowScene" background="color: #FAFAFA"></a-scene>
+			</a-entity>
 		</a-marker>
 		<a-entity camera></a-entity>
 	</a-scene>
