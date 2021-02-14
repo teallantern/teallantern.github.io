@@ -14,6 +14,12 @@
     <a-marker preset='hiro'>
       <a-box position='0 0.5 0' material='color: green;'></a-box>
     </a-marker>
+    <script>
+      arController.addEventListener('getMarker', function(ev)
+      {
+        console.log("marker pos: ", ev.data.marker.pos);
+      });
+    </script>
 
     <!-- handle Kanji marker -->
     <a-marker preset='kanji'>
