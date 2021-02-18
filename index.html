@@ -24,9 +24,9 @@
 
     <!-- add a simple camera -->
     <a-entity camera></a-entity>
-    <!-- <script>
+    <script>
           var arToolKitSource = new THREEx.ArToolkitSource({sourceType : 'webcam',})
-          
+          var arToolkitContext = new THREEx.ArToolkitContext({cameraParametersUrl: 'parameters/camera_para.dat', debug: true,})
               arToolKitSource.init(function onReady(){
               console.log(arToolkitContext.arController);
                   if( arToolkitContext.arController !== null ){
@@ -35,7 +35,7 @@
                     });
             }
         })
-    </script> -->
+    </script>
   </a-scene>
       
 
