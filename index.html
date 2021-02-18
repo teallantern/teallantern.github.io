@@ -15,10 +15,18 @@
       <a-box position='0 0.5 0' material='color: green;'></a-box>
     </a-marker>
     <script>
-      arController.addEventListener('getMarker', function(ev)
-      {
-        console.log("marker pos: ", ev.data.marker.pos);
-      });
+      var atToolKitSource = new THREEx.ArToolkitSource({
+        sourceType : 'webcam',
+      })
+      atToolKitSource.init(function onReady(){
+
+        console.log(arToolKitContext.arController);
+          if(arToolKitContext.arController !== null){
+            arToolKitContext.arController.addEventListener('getMarker', function(ev){
+              console.log('marker pos: ', ev.data.marker.pos);
+            });
+          }
+      })
     </script>
 
     <!-- handle Kanji marker -->
