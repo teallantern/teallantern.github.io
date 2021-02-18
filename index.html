@@ -27,6 +27,7 @@
     <script>
           var arToolKitSource = new THREEx.ArToolkitSource({sourceType : 'webcam',})
           var arToolkitContext = new THREEx.ArToolkitContext({cameraParametersUrl: 'parameters/camera_para.dat', debug: true,})
+             while(true){
               arToolKitSource.init(function onReady(){
                 console.log("test");
               console.log(arToolkitContext.arController);
@@ -36,6 +37,7 @@
                     });
             }
         })
+          }
     </script>
   </a-scene>
       
