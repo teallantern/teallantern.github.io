@@ -18,14 +18,15 @@
       var atToolKitSource = new THREEx.ArToolkitSource({
         sourceType : 'webcam',
       })
-      atToolKitSource.init(function onReady(){
+          arToolkitSource.init(function onReady(){
 
-        console.log(arToolKitContext.arController);
-          if(arToolKitContext.arController !== null){
-            arToolKitContext.arController.addEventListener('getMarker', function(ev){
-              console.log('marker pos: ', ev.data.marker.pos);
-            });
-          }
+      console.log(arToolkitContext.arController);
+        if( arToolkitContext.arController !== null ){
+          arToolkitContext.arController.addEventListener('getMarker', function(ev) {
+          console.log('marker pos: ', ev.data.marker.pos);
+          });
+        }
+    })}
       })
     </script>
 
