@@ -15,18 +15,18 @@
       <a-box position='0 0.5 0' material='color: green;'></a-box>
     </a-marker>
     <script>
-      var atToolKitSource = new THREEx.ArToolkitSource({
-        sourceType : 'webcam',
-      })
-          arToolkitSource.init(function onReady(){
+          var atToolKitSource = new THREEx.ArToolkitSource({
+            sourceType : 'webcam',})
+          var arToolkitContext = new THREEx.ArToolKitContext({})
 
-      console.log(arToolkitContext.arController);
-        if( arToolkitContext.arController !== null ){
-          arToolkitContext.arController.addEventListener('getMarker', function(ev) {
-          console.log('marker pos: ', ev.data.marker.pos);
-          });
-        }
-    })}
+              arToolkitSource.init(function onReady(){
+                console.log(arToolkitContext.arController);
+                  if( arToolkitContext.arController !== null ){
+                    arToolkitContext.arController.addEventListener('getMarker', function(ev) {
+                    console.log('marker pos: ', ev.data.marker.pos);
+                    });
+            }
+        })}
       })
     </script>
 
