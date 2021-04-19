@@ -13,37 +13,32 @@
 
     <!-- handle marker with hiro preset -->
     <a-marker preset='hiro'>
-      <a-entity geometry="primitive: box; width: 1; height: 1; depth: 1"></a-entity>
-
+      <a-box id="hiroObj" position='0 0.5 0' material='color: green;'></a-box>
     </a-marker>
 
 
     <!-- handle Kanji marker -->
     <a-marker preset='kanji'>
-      <a-entity  geometry="primitive: box; width: 1; height: 1; depth: 1; col"></a-entity>
-
+      <a-box id="kanjiObj" position='0 0.5 0' material='color: blue;'></a-box>
     </a-marker>
 
     <!-- add a simple camera -->
     <a-entity camera></a-entity>
     <script>
-          /*var arToolKitSource = new THREEx.ArToolkitSource({sourceType : 'webcam',})
-          var arToolkitContext = new THREEx.ArToolkitContext({cameraParametersUrl: 'parameters/camera_para.dat', debug: true,})
-             while(true){
-              arToolKitSource.init(function onReady(){
-                console.log("test");
-              console.log(arToolkitContext.arController);
-                  if( arToolkitContext.arController !== null ){
-                    arToolkitContext.arController.addEventListener('getMarker', function(ev) {
-                    console.log('marker pos: ', ev.data.marker.pos);
-                    });
-            }
-        })
-          }*/
-          // var kanjiPos = kanji.object3D.getAttribute('position');
-          // var hiroPos = hiro.object3D.getAttribute('position');
-          // console.log(kanjiPos);
-
+        //   var arToolKitSource = new THREEx.ArToolkitSource({sourceType : 'webcam',})
+        //   var arToolkitContext = new THREEx.ArToolkitContext({cameraParametersUrl: 'parameters/camera_para.dat', debug: true,})
+        //       arToolKitSource.init(function onReady(){
+        //         console.log("test");
+        //       console.log(arToolkitContext.arController);
+        //           if( arToolkitContext.arController !== null ){
+        //             arToolkitContext.arController.addEventListener('getMarker', function(ev) {
+        //             console.log('marker pos: ', ev.data.marker.pos);
+        //             });
+        //     }
+        // })
+          var tempHiro = document.getElementsById("hiroObj");
+          var hiroPos = tempHiro.object3D.getAttribute('position');
+          console.log(hiroPos + ": test")
     </script>
   </a-scene>
       
