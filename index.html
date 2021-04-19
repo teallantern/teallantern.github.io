@@ -45,9 +45,14 @@
           console.log(hiroPos);
           console.log(kanjiPos);
 
-
-
-          
+          function eucDistance(vector1, vector2){
+            return vector1
+            .map((x, i) => Math.abs(x-vector2[i])**2)
+            .reduce((sume,now)=> sum+now)
+            **(1/2)
+          }
+          let eD = eucDistance(hiroPos, kanjiPos);
+          console.log(eD);     
           
 
     </script>
