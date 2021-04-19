@@ -38,9 +38,13 @@
         // })
 
           var tempHiro = document.getElementById("hiroObj");
-          var hiroPos = tempHiro.getAttribute('position');
+          // var hiroPos = tempHiro.getAttribute('position');
           var tempKanji = document.getElementById("kanjiObj");
-          var kanjiPos = tempKanji.getAttribute('position');
+          // var kanjiPos = tempKanji.getAttribute('position');
+
+          var hiroPos, kanjiPos;
+
+          tempHiro.getWorldPosition(hiroPos);
 
           console.log(hiroPos);
           console.log(kanjiPos);
