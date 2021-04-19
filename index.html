@@ -36,13 +36,13 @@
         //             });
         //     }
         // })
-
+          var hiroPos, kanjiPos = new THREE.Vector3();
           var tempHiro = document.getElementById("hiroObj");
-          // var hiroPos = tempHiro.getAttribute('position');
+          hiroPos = tempHiro.getAttribute('position');
           var tempKanji = document.getElementById("kanjiObj");
-          // var kanjiPos = tempKanji.getAttribute('position');
+          kanjiPos = tempKanji.getAttribute('position');
 
-          var hiroPos, kanjiPos;
+         
 
           tempHiro.getWorldPosition(hiroPos);
 
