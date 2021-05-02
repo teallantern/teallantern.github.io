@@ -36,12 +36,12 @@
           const scene = new THREE.Scene();
           var tempHiro = document.getElementById("hiroObj");
           var tempKanji = document.getElementById("kanjiObj");
-          var hiroPos = new THREE.Vector3(tempHiro.getAttribute('position'));
-          var kanjiPos = new THREE.Vector3(tempHiro.getAttribute('position'));
+          var hiroPos = new THREE.Vector3();
+          var kanjiPos = new THREE.Vector3();
           
-          //hiroPos = tempHiro.getAttribute('position');
+          hiroPos = tempHiro.getAttribute('position');
           
-         // kanjiPos = tempKanji.getAttribute('position');
+          kanjiPos = tempKanji.getAttribute('position');
 
          
 
@@ -54,7 +54,6 @@
             let dX = hiroPos.getComponent(0) - kanjiPos.getComponent(0);
             let dY = hiroPos.getComponent(1) - kanjiPos.getComponent(1);
             let dZ = hiroPos.getComponent(2) - kanjiPos.getComponent(2);
-            console.log(dX);
 
             return Math.sqrt(dX*dX + dY*dY + dZ*dZ);
           }
