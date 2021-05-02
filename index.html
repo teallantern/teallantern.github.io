@@ -30,26 +30,27 @@
     <script type="module">
 
         
-
+        //import Three.js
         import * as THREE from './three.js';
 
+          //create Vector3s to contain the position of each model
           const scene = new THREE.Scene();
+          //get the hiro marker based box
           var tempHiro = document.getElementById("hiroObj");
+          //get the kanji marker based box
           var tempKanji = document.getElementById("kanjiObj");
           var hiroPos = new THREE.Vector3();
           var kanjiPos = new THREE.Vector3();
           
+          //obtain the position of each box
           hiroPos = tempHiro.getAttribute('position');
-          
           kanjiPos = tempKanji.getAttribute('position');
 
-         
-
-          //tempHiro.getWorldPosition(hiroPos);
+        
 
           console.log(hiroPos);
           console.log(kanjiPos);
-
+          //calculate the distance between the two markers
           function eucDistance(vector1, vector2){
             let dX = hiroPos.getComponent(0) - kanjiPos.getComponent(0);
             let dY = hiroPos.getComponent(1) - kanjiPos.getComponent(1);
@@ -60,22 +61,16 @@
           let eD = eucDistance(hiroPos, kanjiPos);
           console.log(eD); 
 
-    </script>
-    <script>
-        //   var arToolKitSource = new THREEx.ArToolkitSource({sourceType : 'webcam',})
-        //   var arToolkitContext = new THREEx.ArToolkitContext({cameraParametersUrl: 'parameters/camera_para.dat', debug: true,})
-        //       arToolKitSource.init(function onReady(){
-        //         console.log("test");
-        //       console.log(arToolkitContext.arController);
-        //           if( arToolkitContext.arController !== null ){
-        //             arToolkitContext.arController.addEventListener('getMarker', function(ev) {
-        //             console.log('marker pos: ', ev.data.marker.pos);
-        //             });
-        //     }
-        // })
-              
-          
-          
+          /*
+          if statement to check when the two models are within close proximity
+          once they are in close proximity change the model
+          this is where the system would change to a composite model 
+          if(ed < 2){
+            hiroObj = *insert new model here*
+            kanjiObj = *insert new model here*
+          }
+          This would allow users to present a second marker and see a different/more detailed model
+          */
 
     </script>
   </a-scene>
