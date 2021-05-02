@@ -7,15 +7,7 @@
   <!-- include ar.js for A-Frame -->
 	<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
-  <script type="module">
 
-  // Find the latest version by visiting https://cdn.skypack.dev/three.
-
-  import * as THREE from 'https://cdn.skypack.dev/three@<version>';
-
-  const scene = new THREE.Scene();
-
-</script>
 
 </head>
 <body style='margin : 0px; overflow: hidden;'>
@@ -34,19 +26,16 @@
 
     <!-- add a simple camera -->
     <a-entity camera></a-entity>
-    <script>
-        //   var arToolKitSource = new THREEx.ArToolkitSource({sourceType : 'webcam',})
-        //   var arToolkitContext = new THREEx.ArToolkitContext({cameraParametersUrl: 'parameters/camera_para.dat', debug: true,})
-        //       arToolKitSource.init(function onReady(){
-        //         console.log("test");
-        //       console.log(arToolkitContext.arController);
-        //           if( arToolkitContext.arController !== null ){
-        //             arToolkitContext.arController.addEventListener('getMarker', function(ev) {
-        //             console.log('marker pos: ', ev.data.marker.pos);
-        //             });
-        //     }
-        // })
-          var hiroPos = new THREE.Vector3();
+
+    <script type="module">
+
+        // Find the latest version by visiting https://cdn.skypack.dev/three.
+
+        import * as THREE from 'https://cdn.skypack.dev/three@<version>';
+
+        const scene = new THREE.Scene();
+
+        var hiroPos = new THREE.Vector3();
           var kanjiPos = new THREE.Vector3();
           var tempHiro = document.getElementById("hiroObj");
           hiroPos = tempHiro.getAttribute('position');
@@ -69,7 +58,22 @@
             return Math.sqrt(dX*dX + dY*dY + dZ*dZ);
           }
           let eD = eucDistance(hiroPos, kanjiPos);
-          console.log(eD);     
+          console.log(eD); 
+
+    </script>
+    <script>
+        //   var arToolKitSource = new THREEx.ArToolkitSource({sourceType : 'webcam',})
+        //   var arToolkitContext = new THREEx.ArToolkitContext({cameraParametersUrl: 'parameters/camera_para.dat', debug: true,})
+        //       arToolKitSource.init(function onReady(){
+        //         console.log("test");
+        //       console.log(arToolkitContext.arController);
+        //           if( arToolkitContext.arController !== null ){
+        //             arToolkitContext.arController.addEventListener('getMarker', function(ev) {
+        //             console.log('marker pos: ', ev.data.marker.pos);
+        //             });
+        //     }
+        // })
+              
           
           
 
