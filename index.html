@@ -29,18 +29,19 @@
 
     <script type="module">
 
-        // Find the latest version by visiting https://cdn.skypack.dev/three.
+        
 
         import * as THREE from './three.js';
 
-        const scene = new THREE.Scene();
-
-        var hiroPos = new THREE.Vector3();
-          var kanjiPos = new THREE.Vector3();
+          const scene = new THREE.Scene();
           var tempHiro = document.getElementById("hiroObj");
-          hiroPos = tempHiro.getAttribute('position');
           var tempKanji = document.getElementById("kanjiObj");
-          kanjiPos = tempKanji.getAttribute('position');
+          var hiroPos = new THREE.Vector3(tempHiro.getAttribute('position'));
+          var kanjiPos = new THREE.Vector3(tempHiro.getAttribute('position'));
+          
+          //hiroPos = tempHiro.getAttribute('position');
+          
+         // kanjiPos = tempKanji.getAttribute('position');
 
          
 
